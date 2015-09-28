@@ -1,0 +1,21 @@
+
+
+These examples are using a simple MPI parallelized matrix-matrix multiply code in Fortran.
+These will all be executed on Xeon's of aquired node.
+
+We will be using pprof to view results.  Paraprof can be explored later in the workshop.
+
+
+DO:  source ../host_vars.sh (or.csh) 
+  *This sets PATH and TAU_MAKEFILE and xeon papi
+
+Example 1: Library interposition using tau_exec.
+
+   Result: Profile of times
+
+Example 2: Instrument the code with PDT.
+
+   Result: Profiles of times
+
+
+

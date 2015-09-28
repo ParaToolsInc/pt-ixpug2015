@@ -1,0 +1,18 @@
+
+These examples are introductions to
+a few analysis examples, namely getting PAPI metrics
+and using OMPT hooks.
+
+We will do these experiments on the KNCs.
+
+
+DO:
+source ../mic-vars.sh (csh)
+  * to change the PAPI, TAU_MAKEFILE and path for mic_linux builds of the tools.
+
+example3_papi_knc
+
+
+example4_ompt_knc
+
+

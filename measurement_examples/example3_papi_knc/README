@@ -1,0 +1,34 @@
+
+
+This example will profile an MPI application 
+and show how measure PAPI metrics 
+with source based instrumentation.
+
+Done on KNC:
+
+DO:
+
+make
+
+
+record hostname:
+HN="$(hostname)"  <----- bash
+
+set HN `hostname`  <--- cshell
+
+
+declare PAPI metrics:
+export TAU_METRICS=TIME:PAPI_NATIVE_VPU_ELEMENTS_ACTIVE:PAPI_NATIVE_VPU_INSTRUCTIONS_EXECUTED
+
+run instrumented code on KNC:
+mpirun.mic -n 60 -hosts ${HN}-mic1 -ppn 60 ./matmult
+
+look at results:
+ cd MULTI__PAPI_NATIVE_VPU_ELEMENTS_ACTIVE
+pprof -e
+
+
+use of paraprof can visualize derived metrics: Srinath will demonstrate.
+
+
+

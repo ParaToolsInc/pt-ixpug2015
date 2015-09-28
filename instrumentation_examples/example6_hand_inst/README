@@ -1,0 +1,15 @@
+This example shows how to instrument a simple MPI application.
+
+
+DO:
+
+make clena && make
+mpirun -n 15 ./matmult
+
+Note:
+Though it says compilation with instrumented code,
+we have passed the -optLinkOnly to tau_f90.sh.
+
+This will then only add the TAU libraries at the link stage.
+
+

@@ -1,0 +1,35 @@
+This example will run TRACE the mpi only matmult app on SNBs.
+
+
+
+Make sure to rest to the SNB variables:
+
+
+source ../../host-vars.sh
+
+
+Also unset metrics (default to time only):
+unset TAU_METRICS
+
+export TAU_MAKEFILE=/project/projectdirs/acts/vadlaman/tau/2.24.1/intel/16/x86_64/lib/Makefile.tau-icpc-papi-mpi-pdt-openmp
+export TAU_TRACE=1
+export TAU_PROFILE=0
+
+Build:
+make clean && make
+
+Run
+mpirun.host -n 15 ./matmult
+
+
+ls: lots of files for each rank
+transform files into one file:
+tau_treemerge.pl    
+
+Turn files into slog2 format:
+tau2slog2 tau.trc tau.edf -o tau.slog2
+
+if you have jumpshot on your machine:
+jumpshot tau.slog2
+
+

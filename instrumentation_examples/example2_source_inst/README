@@ -1,0 +1,29 @@
+In this example we simple profile the code 
+with source based instrumentation using the PDT parser.
+
+First do:
+make
+
+then run:
+
+mpirun.host -n 8 ./matmult
+pprof -e | less
+
+and view the results [a list of profiles per rank]
+using pprof. 
+
+
+Look for names of subroutines and program blocks from matlmult.f90 in the results.
+Note times.
+
+Run pprof -f profile.<pick one> for particular rank profile.
+
+To see how the code was instrumented do:
+
+make clean
+make -f Makefile.keepFiles
+view matmult.inst.f90
+
+Look for "TAU"
+
+

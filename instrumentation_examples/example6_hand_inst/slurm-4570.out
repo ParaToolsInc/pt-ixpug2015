@@ -1,0 +1,32 @@
+********************************************************************************
+**          Job Name: sh
+**            Job ID: 4570
+**            System: babbage
+** Working Directory: /chos/global/scratch2/sd/vadlaman/ixpug15_workshop/instrumentation_examples/example6_hand_inst
+********************************************************************************
+** Requested: CPUs=1, TimeLimit=None
+**  Consumed: Nodes=1, CPUs=32, ElapsedTime=00:08:29
+**            UserCPU=00:12.135, SystemCPU=00:03.393
+**            ResidentMemory=16?, VirtualMemory=16?
+** Submitted: 2015-09-27T18:42:14
+**  Eligible: 2015-09-27T18:42:14
+**     Start: 2015-09-27T18:42:14
+**       End: None
+** Exit Code: 0:0
+********************************************************************************
+** Step 00: ElapsedTime=00:08:28, UserCPU=00:01.275, SystemCPU=00:02.699
+**          ResidentMemory=2432K, VirtualMemory=252268K
+**          Exit Code: 0:0
+** Step 01: ElapsedTime=00:00:01, UserCPU=00:00.049, SystemCPU=00:00.094
+**          ResidentMemory=0, VirtualMemory=185708K
+**          Exit Code: 0:0
+** Step 02: ElapsedTime=00:00:01, UserCPU=00:00.057, SystemCPU=00:00.075
+**          ResidentMemory=0, VirtualMemory=185708K
+**          Exit Code: 0:0
+** Step 03: ElapsedTime=00:00:05, UserCPU=00:10.693, SystemCPU=00:00.435
+**          ResidentMemory=0, VirtualMemory=185708K
+**          Exit Code: 0:0
+** Step 04: ElapsedTime=00:00:01, UserCPU=00:00.057, SystemCPU=00:00.086
+**          ResidentMemory=0, VirtualMemory=185708K
+**          Exit Code: 0:0
+********************************************************************************

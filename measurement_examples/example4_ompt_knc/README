@@ -1,0 +1,38 @@
+
+This example will demonstrate library interposition proflining 
+on the knc with OMPT hooks
+
+
+** make sure to source the mic_vars.sh<csh>
+
+source ../../mic-vars.sh
+
+Build:
+make clean && make
+
+
+Get TAU ready:
+export TAU_METRICS=TIME:PAPI_NATIVE_VPU_ELEMENTS_ACTIVE:PAPI_NATIVE_VPU_INSTRUCTIONS_EXECUTED
+
+record hostname:
+HN="$(hostname)"  <----- bash
+
+set HN `hostname`  <--- cshell
+
+Set up thread per rank:
+
+export OMP_NUM_THREADS=10
+
+run:
+mpirun.mic -n 6 -hosts ${HN}-mic0 -ppn 6 tau_exec -T icpc,papi,ompt,mpi,pdt,openmp ./matmult
+
+
+look at results:
+ls
+ls MULTI__PAPI_NATIVE_VPU_ELEMENTS_ACTIVE/
+cd MULTI__PAPI_NATIVE_VPU_ELEMENTS_ACTIVE
+pprof -e | less
+
+
+
+

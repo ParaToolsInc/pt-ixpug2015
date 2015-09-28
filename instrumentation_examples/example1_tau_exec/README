@@ -1,0 +1,13 @@
+In this example we simple profile the code 
+with event base sampling 
+
+mpirun.host -n 8 tau_exec -T icpc,papi,ompt,mpi,pdt,openmp -ebs ./matmult
+pprof -e | less
+
+and view the results [a list of profiles per rank]
+using pprof. 
+
+
+Look for names of subroutines and program blocks from matlmult.f90 in the results.
+
+
