@@ -1,0 +1,3 @@
+[submodule "PTTS-example/nersc-training"]
+	path = PTTS-example/nersc-training
+	url = git@github.com:srinathv/training.git
