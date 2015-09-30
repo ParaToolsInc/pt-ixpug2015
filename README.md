@@ -26,4 +26,7 @@ cshell:
   mic-vars.csh
 
 
+For PTTS examples one must load the submodule (git concept)
+git submodule init
+git submodule update
 
